@@ -1,0 +1,233 @@
+# [   ]  |=||   \\      //  |\\  //|
+#  | |    =||    \\ || //   ||\\//||
+# [   ]  |=||     \_/\_/    || \/ ||
+# by SlashAcorn
+
+# my Unicomp IBM Model M doesn't have a super key, change this accordingly
+set $mod Mod1
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym $mod+e exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym $mod+d exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec alacritty
+#bindsym $mod+Shift+Return exec "Floating terminal"
+
+# assign windows to workspaces
+assign [class="firefox"]         $ws2
+assign [class="discord"]         $ws3
+assign [class="spotify"]         $ws5
+assign [class="thunderbird"]     $ws6
+
+#startup apps
+exec discord
+exec firefox
+exec alacritty
+exec spotify
+exec_always polybar -r
+
+#screenshot
+bindsym $mod+o exec flameshot gui
+bindsym PrtSc exec flameshot screen -p ~/screenshots
+
+# start web browser
+bindsym $mod+x exec firefox
+
+#start file manager
+bindsym $mod+c exec nautilus
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start rofi (a program launcher)
+bindsym $mod+z exec  rofi -show run -lines 4 -eh 1 -width 100 -padding 500
+# rofi pass
+bindsym $mod+m exec  ./rofi-pass
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+b split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split) UNUSED
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Define names for default  for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1: 󰞷"
+set $ws2 "2: 󰈹"
+set $ws3 "3: 󰙯"
+set $ws4 "4: 󰏫"
+set $ws5 "5: 󰋋"
+set $ws6 "6: 󰻧"
+set $ws7 "7: 󰑋"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# window border size
+for_window [class="^.*"] border pixel 3
+
+# this was when I was mad discord wasnt customizable so I made everything look like discord
+# some colours are different but some are the discord colours and are not used but it works
+# window colour variables
+set $chat-backgr	#2b1723
+set $light-grey		#180d1e
+set $blurple 		#662939
+set $light-blurp	#461e33
+set $green		#57F287
+set $yellow		#fdc43a
+set $fuchsia		#EB459E
+set $red		#f4406a
+set $white		#FFFFFF
+set $black		#000000
+
+# window colours
+# class                 border		backgr. 	text   	indicator
+client.focused          $blurple 	$blurple	$white		$light-blurp
+client.focused_inactive $light-grey	$light-grey	$white		$light-grey
+client.unfocused        $light-grey	$light-grey	$white		$chat-backgr
+client.urgent           $red		$red		$white		$red
+
+# reload the configuration file
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+# I should configure this but I dont use it anyway
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# lockhow to c
+# should install a lock screen script
+bindsym $mod+Shift+w exec i3lock -c "$chat-backgr"
+# suspend
+bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# I use polybar so this is all commented out
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#
+#border
+#
+#bar {
+#	status_command i3status
+#  colors {
+#    background #26041d
+#    statusline #F8F8F2
+#    separator  #chat-backgr
+#
+#    focused_workspace  $blurple $blurple #F8F8F2
+#    active_workspace   $light-blurp $light-blurp $chat-backgr
+#    inactive_workspace $chat-backgr $chat-backgr #BFBFBF
+#    urgent_workspace   $red $red #F8F8F2
+#    binding_mode       $yellow $yellow $chat-backgr
+#  }
+#}
+#
+#transparency
+exec_always picom --backend glx --blur-method dual_kawase --experimental-backends --blur-strength 2.5 -I 0.02 -O 0.02 -D 2 -f 
+#wallpaper
+exec_always feh --bg-scale /usr/share/backgrounds/archwallpaper.png
+
+#gaps
+workspace $ws2 gaps outer 2
+gaps inner 7
+gaps outer 5
