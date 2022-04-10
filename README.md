@@ -66,4 +66,6 @@ Thanks to [elenapan](https://github.com/elenapan/dotfiles/) for the rofi config 
 - [x] configure i3
 - [x] configure cli-visualizer
 - [x] configure rofi
+- [ ] configure emacs
+- [ ] configure betterlockscreen
 - [ ] configure dunst
