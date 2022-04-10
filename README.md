@@ -43,7 +43,7 @@ Move the files from [backgrounds](backgrounds) to ``/usr/share/backgrounds``
 Thanks to [elenapan](https://github.com/elenapan/dotfiles/) for the rofi config that I totally stole and recoloured
 ### wallpapers
 - [blobs.png](backgrounds/blobs.png) comes pre-installed with ``lightdm-webkit2-greeter`` which is the greeter I use
--[archwallpaper.png](backgrounds/archwallpaper.png) came from [this reddit post by u/baron-digit](https://www.reddit.com/r/LinuxArt/comments/igcg1f/arch_linux_wallpapers_sweet_kde_style/)
+- [archwallpaper.png](backgrounds/archwallpaper.png) came from [this reddit post by u/baron-digit](https://www.reddit.com/r/LinuxArt/comments/igcg1f/arch_linux_wallpapers_sweet_kde_style/)
 
 ## To Do
 - [x] configure polybar
