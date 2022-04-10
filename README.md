@@ -18,13 +18,13 @@ My i3/polybar rice for my Arch Linux system
 - nvidia-smi
 
 
-Install on arch linux by running the command appropriate for your audio server
+#### Install on arch linux by running the command appropriate for your audio server
 
-for pipewire users:
+##### for pipewire users:
 
 ``yay -S i3-gaps polybar rofi cli-visualizer playerctl zscroll spotify pipewire-pulse nvidia``
 
-for pulseaudio users:
+##### for pulseaudio users:
 
 ``yay -S i3-gaps polybar rofi cli-visualizer playerctl zscroll spotify pulseaudio nvidia``
 
@@ -36,7 +36,7 @@ for pulseaudio users:
 - Material Design Icons
 - Font Awesome 5 Free Regular
 
-Install the fonts on arch linux by running
+#### Install the fonts on arch linux by running
 
 ``yay -S noto-fonts nerd-fonts-bitstream-vera-mono ttf-twemoji-color ttf-material-design-icons ttf-font-awesome-5``
 
