@@ -23,3 +23,10 @@ Bitstream Vera Sans Mono Nerd Font
 Twitter Color Emoji
 Material Design Icons
 Font Awesome 5 Free Regular
+
+## To Do
+- [x] configure polybar
+- [x] configure i3
+- [x] configure cli-visualizer
+- [x] configure rofi
+- [ ] configure dunst
