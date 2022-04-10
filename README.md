@@ -5,6 +5,7 @@ My i3/polybar rice for my Arch Linux system
 ## Details
 ### My system information
 - WM: i3-gaps
+- Bar: polybar
 - Linux Distro: Arch linux
 - Shell: bash
 - Terminal: alacritty
