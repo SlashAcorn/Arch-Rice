@@ -29,11 +29,11 @@ for pulseaudio users:
 
 
 ### Fonts
-Monospace
-Bitstream Vera Sans Mono Nerd Font
-Twitter Color Emoji
-Material Design Icons
-Font Awesome 5 Free Regular
+- Monospace
+- Bitstream Vera Sans Mono Nerd Font
+- Twitter Color Emoji
+- Material Design Icons
+- Font Awesome 5 Free Regular
 
 ### Backgrounds
 Move the files from [backgrounds](backgrounds) to ``/usr/share/backgrounds``
@@ -42,8 +42,8 @@ Move the files from [backgrounds](backgrounds) to ``/usr/share/backgrounds``
 ### rofi
 Thanks to [elenapan](https://github.com/elenapan/dotfiles/) for the rofi config that I totally stole and recoloured
 ### wallpapers
-[blobs.png](backgrounds/blobs.png) comes pre-installed with ``lightdm-webkit2-greeter`` which is the greeter I use
-[archwallpaper.png](backgrounds/archwallpaper.png) came from [this reddit post by u/baron-digit](https://www.reddit.com/r/LinuxArt/comments/igcg1f/arch_linux_wallpapers_sweet_kde_style/)
+- [blobs.png](backgrounds/blobs.png) comes pre-installed with ``lightdm-webkit2-greeter`` which is the greeter I use
+-[archwallpaper.png](backgrounds/archwallpaper.png) came from [this reddit post by u/baron-digit](https://www.reddit.com/r/LinuxArt/comments/igcg1f/arch_linux_wallpapers_sweet_kde_style/)
 
 ## To Do
 - [x] configure polybar
