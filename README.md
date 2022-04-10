@@ -22,6 +22,7 @@ Install on arch linux by running
 for pipewire users:
 
 ``yay -S i3-gaps polybar rofi cli-visualizer playerctl zscroll spotify pipewire-pulse nvidia``
+
 for pulseaudio users:
 
 ``yay -S i3-gaps polybar rofi cli-visualizer playerctl zscroll spotify pulseaudio nvidia``
