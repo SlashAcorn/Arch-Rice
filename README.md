@@ -24,6 +24,9 @@ Twitter Color Emoji
 Material Design Icons
 Font Awesome 5 Free Regular
 
+### Backgrounds
+Move the files from [backgrounds](backgrounds) to ``/usr/share/backgrounds``
+
 ## To Do
 - [x] configure polybar
 - [x] configure i3
