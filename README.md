@@ -7,15 +7,25 @@ My i3/polybar rice for my Arch Linux system
 
 ## Installation
 ### Dependencies
-i3-gaps
-polybar
-rofi
-cli-visualizer
-playerctl
-zscroll
-spotify
-pulseaudio (pipewire-pulse if using pipewire)
-nvidia-smi
+- i3-gaps
+- polybar
+- rofi
+- cli-visualizer
+- playerctl
+- zscroll
+- spotify
+- pulseaudio (pipewire-pulse if using pipewire)
+- nvidia-smi
+
+
+Install on arch linux by running
+for pipewire users:
+
+``yay -S i3-gaps polybar rofi cli-visualizer playerctl zscroll spotify pipewire-pulse nvidia``
+for pulseaudio users:
+
+``yay -S i3-gaps polybar rofi cli-visualizer playerctl zscroll spotify pulseaudio nvidia``
+
 
 ### Fonts
 Monospace
@@ -26,6 +36,13 @@ Font Awesome 5 Free Regular
 
 ### Backgrounds
 Move the files from [backgrounds](backgrounds) to ``/usr/share/backgrounds``
+
+## Credits
+### rofi
+Thanks to [elenapan](https://github.com/elenapan/dotfiles/) for the rofi config that I totally stole and recoloured
+### wallpapers
+[blobs.png](backgrounds/blobs.png) comes pre-installed with ``lightdm-webkit2-greeter`` which is the greeter I use
+[archwallpaper.png](backgrounds/archwallpaper.png) came from [this reddit post by u/baron-digit](https://www.reddit.com/r/LinuxArt/comments/igcg1f/arch_linux_wallpapers_sweet_kde_style/)
 
 ## To Do
 - [x] configure polybar
