@@ -1,6 +1,16 @@
 # Arch-Rice
 My i3/polybar rice for my Arch Linux system
 
+
+## Details
+### My system information
+- WM: i3-gaps
+- Linux Distro: Arch linux
+- Shell: bash
+- Terminal: alacritty
+- Launcher: rofi
+- File Manager: nautilus
+
 ## Screenshots
 ![screenshot](https://github.com/SlashAcorn/Arch-Rice/blob/main/screenshots/arch4.png)
 ![screenshot](https://github.com/SlashAcorn/Arch-Rice/blob/main/screenshots/archrice.png)
