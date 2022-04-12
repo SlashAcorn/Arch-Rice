@@ -18,7 +18,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-#bindsym $mod+Shift+Return exec "Floating terminal"
+# bindsym $mod+Shift+Return exec "Floating terminal"
 
 # assign windows to workspaces
 assign [class="firefox"]         $ws2
@@ -26,22 +26,25 @@ assign [class="discord"]         $ws3
 assign [class="spotify"]         $ws5
 assign [class="thunderbird"]     $ws6
 
-#startup apps
+# startup apps
 exec discord
 exec firefox
 exec alacritty
 exec spotify
 exec_always polybar -r
 
-#screenshot
+# screenshot
 bindsym $mod+o exec flameshot gui
-bindsym PrtSc exec flameshot screen -p ~/screenshots
+#bindsym PrtSc exec flameshot screen -p ~/screenshots
 
 # start web browser
 bindsym $mod+x exec firefox
 
-#start file manager
+# start file manager
 bindsym $mod+c exec nautilus
+
+# start emacs
+bindsym $mod+e exec emacs
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -99,7 +102,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+# bindsym $mod+d focus child
 
 # Define names for default  for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -222,12 +225,12 @@ bindsym $mod+r mode "resize"
 #  }
 #}
 #
-#transparency
+# transparency
 exec_always picom --backend glx --blur-method dual_kawase --experimental-backends --blur-strength 2.5 -I 0.02 -O 0.02 -D 2 -f 
-#wallpaper
+# wallpaper
 exec_always feh --bg-scale /usr/share/backgrounds/archwallpaper.png
 
-#gaps
+# gaps
 workspace $ws2 gaps outer 2
 gaps inner 7
 gaps outer 5
