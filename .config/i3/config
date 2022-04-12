@@ -44,7 +44,7 @@ bindsym $mod+x exec firefox
 bindsym $mod+c exec nautilus
 
 # start emacs
-bindsym $mod+e exec emacs
+bindsym $mod+t exec emacs
 
 # kill focused window
 bindsym $mod+Shift+q kill
