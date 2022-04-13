@@ -66,7 +66,7 @@ Thanks to [elenapan](https://github.com/elenapan/dotfiles/) for the rofi config 
 - [x] configure i3
 - [x] configure cli-visualizer
 - [x] configure rofi
-- [ ] configure min browser and [homepage](https://github.com/Jaredk3nt/homepage)
+- [x] configure min browser and [homepage](https://github.com/Jaredk3nt/homepage) only crossed off because min lacks functionality and I had trouble using [homepage](https://github.com/Jaredk3nt/homepage) as a new tab page.
 - [ ] configure emacs
-- [ ] configure betterlockscreen
+- [x] configure betterlockscreen
 - [ ] configure dunst
