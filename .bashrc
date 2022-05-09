@@ -84,7 +84,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias .4='cd ../../../..'
     alias .5='cd ../../../../..'
     alias cmatrix='cmatrix -b'
-    alias emacs='emacs -nw'
     alias speedtest='~/speedtest'
     alias update='yay -Syu'
     alias dir='dir --color=auto'
