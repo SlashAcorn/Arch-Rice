@@ -1,3 +1,6 @@
+## Note
+I have archived this repository, everything here should still work fine though.
+---
 # Arch-Rice
 My i3/polybar rice for my Arch Linux system
 
